@@ -1,4 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey
+from sqlalchemy import DateTime
+from datetime import datetime
 from .database import Base
 
 
@@ -49,3 +51,20 @@ class RiskZone(Base):
     zone_name = Column(String)
     risk_level = Column(String)
     risk_type = Column(String)
+
+class Journey(Base):
+    __tablename__ = "journeys"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    source = Column(String, nullable=False)
+
+    destination = Column(String, nullable=False)
+
+    selected_route = Column(String)
+
+    fare = Column(Float)
+
+    travel_time = Column(Float)
+
+    created_at = Column(DateTime, default=datetime.utcnow)

@@ -1,5 +1,5 @@
 from typing import List
-from models.risk_model import RiskData
+from backend.models.risk_model import RiskData
 
 
 class RiskEngine:

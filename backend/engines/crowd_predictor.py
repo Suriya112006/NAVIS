@@ -1,4 +1,4 @@
-from models.crowd_model import CrowdData
+from backend.models.crowd_model import CrowdData
 
 
 class CrowdPredictor:
